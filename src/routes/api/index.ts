@@ -102,7 +102,7 @@ export async function POST({ request }: APIEvent) {
 
     const apiKey = randomKey(splitKeys(key))
     
-    f (!apiKey) throw new Error("没有填写 OpenAI API key，或者 key 填写错误。")
+    if(!apiKey) throw new Error("没有填写 OpenAI API key，或者 key 填写错误。")
 
     const encoder = new TextEncoder()
     const decoder = new TextDecoder()
