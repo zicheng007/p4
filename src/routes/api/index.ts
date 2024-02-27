@@ -102,8 +102,6 @@ export async function POST({ request }: APIEvent) {
 
     const apiKey = randomKey(splitKeys(key))
 
-    if (model) throw new Error(`模型指定错误：${model}`);
-
     const encoder = new TextEncoder()
     const decoder = new TextDecoder()
 
