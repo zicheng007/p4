@@ -71,7 +71,7 @@ export async function POST({ request }: APIEvent) {
       key?: string
       temperature: number
       password?: string
-      model: Model
+      model: "deepseek-r1"
     } = await request.json()
     const { messages, key = localKey, temperature, password, model } = body
 
@@ -108,7 +108,7 @@ export async function POST({ request }: APIEvent) {
     const decoder = new TextDecoder()
 
     const rawRes = await fetchWithTimeout(
-      `https://${baseURL}/v1/chat/completions`,
+      `https://${baseURL}`,
       {
         headers: {
           "Content-Type": "application/json",
