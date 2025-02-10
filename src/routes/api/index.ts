@@ -43,7 +43,7 @@ export const localKey = process.env.OPENAI_API_KEY || ""
 //         process.env.OPENAI_API_BASE_URL || defaultEnv.OPENAI_API_BASE_URL
 //       ).replace(/^https?:\/\//, "")
 
-export const baseURL = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"
+export const baseURL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
 
 // + 作用是将字符串转换为数字
 const timeout = isNaN(+process.env.TIMEOUT!)
